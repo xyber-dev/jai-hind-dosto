@@ -1,0 +1,246 @@
+ ~ * Software Development * ~
+** Key-Points **
+
+1. Data Serialization:
+Data serialization is the process of converting data objects present in complex data structures into a byte stream for storage, transfer and distribution purposes on physical devices.
+Computer systems may vary in their hardware architecture, OS, addressing mechanisms. Internal binary representations of data also vary accordingly in every environment. Storing and exchanging data between such varying environments requires a platform-and-language-neutral data format that all systems understand.
+Once the serialized data is transmitted from the source machine to the destination machine, the reverse process of creating objects from the byte sequence called deserialization is carried out. Reconstructed objects are clones of the original object.
+Choice of data serialization format for an application depends on factors such as data complexity, need for human readability, speed and storage space constraints. XML, JSON, BSON, YAML, MessagePack, and protobuf are some commonly used data serialization formats.
+
+MILESTONES OF DATA SERIALIZATION
+> 1972: CSV format is used in IBM Fortran machines from as early as 1972. The name CSV (Comma-Separated Values) itself is coined in the era of modern PCs, about 1983.
+> 1997: The term serialization is used in the context of data for the first time. In-built support for language-specific serialization is introduced in the Java language: Serializable interface for in-built support and Externalizable interface for user-defined implementation. Older languages like C did not have direct functions to serialize data.
+> 1998: XML 1.0 becomes a W3C Recommendation. XML, like its more popular cousin HTML, is derived from the original markup language SGML, which was created in the pre-internet era of the 1980s.
+> 2001: Douglas Crockford, credited with inventing JSON, popularizes its use around the year 2001. However, he reveals later that JSON was used at Netscape as early as 1996.
+> 2004: YAML, an extension of JSON, releases its first version.
+> 2008: MessagePack, another binary serialization format derived from JSON releases with support for all major programming languages.
+> 2008: Protocol Buffers from Google is released to the public. However, it's been in use internally since 2001.
+> 2016: BSON is released as an independent data serialization format in 2016. It originated in 2009 at MongoDB for its internal use.
+> 2018: Oracle decides to drop the Java serialization feature from future Java versions, calls it a “horrible mistake”, due to data security issues. Intends to replace it with a plugin framework where users can choose their serialization format such as JSON, XML or YAML. 
+
+2. JSON:
+JavaScript Object Notation is an open-standard file format or data interchange format that uses human-readable text to transmit data objects consisting of attribute–value pairs and array data types. JSON is a lightweight format for storing and transporting data. JSON is often used when data is sent from a server to a web page. JSON is "self-describing" and easy to understand.
+
+3. XML:
+Extensible Markup Language (XML) is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. The World Wide Web Consortium's XML 1.0 Specification of 1998 and several other related specifications—all of them free open standards—define XML.
+
+4. YAML:
+YAML is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted. YAML targets many of the same communications applications as Extensible Markup Language but has a minimal syntax which intentionally differs from SGML.
+
+5. Protobuf:
+Protocol Buffers (Protobuf) is a method of serializing structured data. It is useful in developing programs to communicate with each other over a wire or for storing data. The method involves an interface description language that describes the structure of some data and a program that generates source code from that description for generating or parsing a stream of bytes that represents the structured data.
+Google developed Protocol Buffers for internal use and provided a code generator for multiple languages under an open source license
+
+6. API:
+An application programming interface is an interface or communication protocol between different parts of a computer program intended to simplify the implementation and maintenance of software. An API may be for a web-based system, operating system, database system, computer hardware, or software library.
+
+7. gRPC:
+gRPC (gRPC Remote Procedure Calls) is an open source remote procedure call (RPC) system initially developed at Google in 2015. It uses HTTP/2 for transport, Protocol Buffers as the interface description language, and provides features such as authentication, bidirectional streaming and flow control, blocking or nonblocking bindings, and cancellation and timeouts. It generates cross-platform client and server bindings for many languages. Most common usage scenarios include connecting services in microservices style architecture and connect mobile devices, browser clients to backend services.
+
+8. REST:
+Representational state transfer (REST) is a software architectural style that defines a set of constraints to be used for creating Web services. Web services that conform to the REST architectural style, called RESTful Web services, provide interoperability between computer systems on the Internet. RESTful Web services allow the requesting systems to access and manipulate textual representations of Web resources by using a uniform and predefined set of stateless operations. Other kinds of Web services, such as SOAP Web services, expose their own arbitrary sets of operations.
+"Web resources" were first defined on the World Wide Web as documents or files identified by their URLs. However, today they have a much more generic and abstract definition that encompasses every thing or entity that can be identified, named, addressed, or handled, in any way whatsoever, on the Web. In a RESTful Web service, requests made to a resource's URI will elicit a response with a payload formatted in HTML, XML, JSON, or some other format. The response can confirm that some alteration has been made to the stored resource, and the response can provide hypertext links to other related resources or collections of resources. When HTTP is used, as is most common, the operations (HTTP methods) available are GET, HEAD, POST, PUT, PATCH, DELETE, CONNECT, OPTIONS and TRACE.
+
+9. Data Models:
+Data Models are fundamental entities to introduce abstraction in a DBMS. Data models define how data is connected to each other and how they are processed and stored inside the system. The very first data model could be flat data-models, where all the data used are to be kept in the same plane.
+
+10. YANG:
+YANG is a data modeling language used to model configuration and state data manipulated by the NETCONF protocol. YANG was published as RFC 6020 in September, 2010. YANG relates to the content and operations layers in NETCONF.
+The authors of YANG were involved in the development of the next generation SNMP SMI and are very experienced in the IETF network management arena. Modern network standards groups such as the Metro Ethernet Forum are adopting YANG as a device configuration standard.
+
+KEY POINTS OF YANG:
+	>    Human readable, easy to learn representation
+	>    Hierarchical configuration data models
+	>    Reusable types and groupings (structured types)
+	>    Extensibility through augmentation mechanisms
+	>    Supports the definition of operations (RPCs)
+	>    Formal constraints for configuration validation
+	>    Data modularity through modules and submodules
+	>    Versioning rules and development support
+
+11. Orchestration System:
+Orchestration System provides automated configuration, coordination and management of complex computing networks, systems and services. These systems are designed to reduce the time and manual manipulation required to align a business’ applications, data and infrastructure. In a software-defined networking (SDN) context, orchestration systems decouple the orchestration layer from the service layer to increase the agility of the applications being rolled out on the network.
+
+12. Kubernetes:
+Kubernetes (commonly stylized as k8s) is an open-source container-orchestration system for automating application deployment, scaling, and management. It was originally designed by Google, and is now maintained by the Cloud Native Computing Foundation. It aims to provide a "platform for automating deployment, scaling, and operations of application containers across clusters of hosts". It works with a range of container tools, including Docker. Many cloud services offer a Kubernetes-based platform or infrastructure as a service (PaaS or IaaS) on which Kubernetes can be deployed as a platform-providing service. Many vendors also provide their own branded Kubernetes distributions.
+
+13. Docker Swarm:
+As a platform, Docker has revolutionized the manner software was packaged. Docker Swarm or simply Swarm is an open-source container orchestration platform and is the native clustering engine for and by Docker. Any software, services, or tools that run with Docker containers run equally well in Swarm. Also, Swarm utilizes the same command line from Docker.
+Swarm turns a pool of Docker hosts into a virtual, single host. Swarm is especially useful for people who are trying to get comfortable with an orchestrated environment or who need to adhere to a simple deployment technique but also have more just one cloud environment or one particular platform to run this on.
+
+14. Apache Mesos:
+Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), enabling fault-tolerant and elastic distributed systems to easily be built and run effectively. Mesos is built using the same principles as the Linux kernel, only at a different level of abstraction. The Mesos kernel runs on every machine and provides applications (e.g., Hadoop, Spark, Kafka, Elasticsearch) with API’s for resource management and scheduling across entire datacenter and cloud environments.
+
+15. Etcd:
+Etcd is an open-source distributed key-value store created by the CoreOS team, now managed by the Cloud Native Computing Foundation. It is pronounced “et-cee-dee”, making reference to distributing the Unix “/etc” directory, where most global configuration files live, across multiple machines. It serves as the backbone of many distributed systems, providing a reliable way for storing data across a cluster of servers. It works on a variety of operating systems including Linux, BSD and OS X.
+
+Etcd has the following properties:
+	>    Fully Replicated: The entire store is available on every node in the cluster
+	>    Highly Available: Etcd is designed to avoid single points of failure in case of hardware or network issues
+	>    Consistent: Every read returns the most recent write across multiple hosts
+	>    Simple: Includes a well-defined, user-facing API (gRPC)
+	>    Secure: Implements automatic TLS with optional client certificate authentication
+	>    Fast: Benchmarked at 10,000 writes per second
+	>    Reliable: The store is properly distributed using the Raft algorithm
+
+16. NETCONF:
+NETCONF is a protocol defined by the IETF to “install, manipulate, and delete the configuration of network devices”. NETCONF operations are realized on top of a Remote Procedure Call (RPC) layer using an XML encoding and provides a basic set of operations to edit and query configuration on a network device.
+
+KEY POINTS OF NETCONF:
+The NETCONF protocol was designed to address the shortcomings of existing practices and protocols for configuration management. The background work preceding the design phase has been documented in RFC 3535 Overview of the 2002 IAB Network Management Workshop. The design goals from that work includes:
+	>    Distinction between configuration and state data
+	>    Multiple configuration data stores (candidate, running, startup)
+	>    Configuration change transactions
+	>    Configuration testing and validation support
+	>    Selective data retrieval with filtering
+	>    Streaming and playback of event notifications
+	>    Extensible procedure call mechanism
+
+17. gNMI:
+gNMI is gRPC network management protocol developed by Google. gNMI provides the mechanism to install, manipulate, and delete the configuration of network devices, and also to view operational data. The content provided through gNMI can be modeled using YANG.
+gRPC is a remote procedure call developed by Google for low-latency, scalable distributions with mobile clients communicating to a cloud server. gRPC carries gNMI, and provides the means to formulate and transmit data and operation requests.
+When a failure occurs, the gNMI broker (GNMIB) will indicate an operational change of state from up to down, and all RPCs will return a service unavailable message until the database is up and running. Upon recovery, the GNMIB will indicate a change of operation state from down to up, and resume normal handling of RPCs.
+
+18. Network Monitoring:
+In today's world, the term network monitoring is widespread throughout the IT industry. Network monitoring is a critical IT process where all networking components like routers, switches, firewalls, servers, and VMs are monitored for fault and performance and evaluated continuously to maintain and optimize their availability. One important aspect of network monitoring is that it should be proactive. Finding performance issues and bottlenecks proactively helps in identifying issues at the initial stage. Efficient proactive monitoring can prevent network downtime or failures.
+
+Important aspects of network monitoring:
+	>    Monitoring the essentials
+	>    Optimizing the monitoring interval
+	>    Selecting the right protocol
+	>    Setting thresholds
+
+19. Cacti:
+Cacti is an open-source, web-based network monitoring and graphing tool designed as a front-end application for the open-source, industry-standard data logging tool RRDtool. Cacti allows a user to poll services at predetermined intervals and graph the resulting data. It is generally used to graph time-series data of metrics such as CPU load and network bandwidth utilization. A common usage is to monitor network traffic by polling a network switch or router interface via Simple Network Management Protocol (SNMP).
+The front end can handle multiple users, each with their own graph sets, so it is sometimes used by web hosting providers (especially dedicated server, virtual private server, and colocation providers) to display bandwidth statistics for their customers. It can be used to configure the data collection itself, allowing certain setups to be monitored without any manual configuration of RRDtool. Cacti can be extended to monitor any source via shell scripts and executables.
+Cacti can use one of two back ends: "cmd.php", a PHP script suitable for smaller installations, or "Spine" (formerly Cactid), a C-based poller which can scale to thousands of hosts.
+
+20. Nagios:
+Nagios, now known as Nagios Core, is a free and open-source computer-software application that monitors systems, networks and infrastructure. Nagios offers monitoring and alerting services for servers, switches, applications and services. It alerts users when things go wrong and alerts them a second time when the problem has been resolved.
+Ethan Galstad and a group of developers originally wrote Nagios as NetSaint. As of 2015 they actively maintain both the official and unofficial plugins. Nagios is a recursive acronym: "Nagios Ain't Gonna Insist On Sainthood" – "sainthood" makes reference to the original name NetSaint, which changed in response to a legal challenge by owners of a similar trademark. "Agios" (or "hagios") also transliterates the Greek word άγιος, which means "saint".
+Nagios was originally designed to run under Linux, but it also runs well on other Unix variants. It is free software licensed under the terms of the GNU General Public License version 2 as published by the Free Software Foundation.
+
+21. Time Series Database:
+A time series database (TSDB) is a database optimized for time-stamped or time series data. Time series data are simply measurements or events that are tracked, monitored, downsampled, and aggregated over time. This could be server metrics, application performance monitoring, network data, sensor data, events, clicks, trades in a market, and many other types of analytics data.
+A time series database is built specifically for handling metrics and events or measurements that are time-stamped. A TSDB is optimized for measuring change over time. Properties that make time series data very different than other data workloads are data lifecycle management, summarization, and large range scans of many records.
+
+22. Prometheus:
+Prometheus is a free software application used for event monitoring and alerting. It records real-time metrics in a time series database (allowing for high dimensionality) built using a HTTP pull model, with flexible queries and real-time alerting. The project is written in Go and licensed under the Apache 2 License, with source code available on GitHub, and is a graduated project of the Cloud Native Computing Foundation, along with Kubernetes and Envoy.
+
+23. InfluxDB:
+InfluxDB is an open-source time series database (TSDB) developed by InfluxData. It is written in Go and optimized for fast, high-availability storage and retrieval of time series data in fields such as operations monitoring, application metrics, Internet of Things sensor data, and real-time analytics. It also has support for processing data from Graphite.
+
+24. RRDtool:
+RRDtool (round-robin database tool) aims to handle time series data such as network bandwidth, temperatures or CPU load. The data is stored in a circular buffer based database, thus the system storage footprint remains constant over time.
+It also includes tools to extract round-robin data in a graphical format, for which it was originally intended. Bindings exist for several programming languages, e.g. Perl, Python, Ruby, Tcl, PHP and Lua. There is an independent full Java implementation called rrd4j.
+
+25. Distributed Database:
+A distributed database is a database in which not all storage devices are attached to a common processor. It may be stored in multiple computers, located in the same physical location; or may be dispersed over a network of interconnected computers. Unlike parallel systems, in which the processors are tightly coupled and constitute a single database system, a distributed database system consists of loosely coupled sites that share no physical components.
+
+System administrators can distribute collections of data (e.g. in a database) across multiple physical locations. A distributed database can reside on an organized network servers or decentralized independent computers on the Internet, on corporate intranets or extranets, or on other organization networks. Because distributed databases store data across multiple computers, distributed databases may improve performance at end-user worksites by allowing transactions to be processed on many machines, instead of being limited to one.
+
+Two processes ensure that the distributed databases remain up-to-date and current: replication and duplication.
+	> Replication involves using specialized software that looks for changes in the distributive database. Once the changes have been identified, the replication process makes all the databases look the same. The replication process can be complex and time-consuming depending on the size and number of the distributed databases. This process can also require a lot of time and computer resources.
+    	> Duplication, on the other hand, has less complexity. It basically identifies one database as a master and then duplicates that database. The duplication process is normally done at a set time after hours. This is to ensure that each distributed location has the same data. In the duplication process, users may change only the master database. This ensures that local data will not be overwritten.
+
+Both replication and duplication can keep the data current in all distributive locations.
+Besides distributed database replication and fragmentation, there are many other distributed database design technologies. For example, local autonomy, synchronous and asynchronous distributed database technologies. These technologies' implementations can and do depend on the needs of the business and the sensitivity/confidentiality of the data stored in the database, and the price the business is willing to spend on ensuring data security, consistency and integrity.
+When discussing access to distributed databases, Microsoft favors the term distributed query, which it defines in protocol-specific manner as "[a]ny SELECT, INSERT, UPDATE, or DELETE statement that references tables and rowsets from one or more external OLE DB data sources". Oracle provides a more language-centric view in which distributed queries and distributed transactions form part of distributed SQL.
+
+26. Centralized Database:
+A centralized database (sometimes abbreviated CDB) is a database that is located, stored, and maintained in a single location. This location is most often a central computer or database system, for example a desktop or server CPU, or a mainframe computer. [1] In most cases, a centralized database would be used by an organization (e.g. a business company) or an institution (e.g. a university.) Users access a centralized database through a computer network which is able to give them access to the central CPU, which in turn maintains to the database itself.
+
+27. Indexing:
+Indexing is a way to optimize the performance of a database by minimizing the number of disk accesses required when a query is processed. It is a data structure technique which is used to quickly locate and access the data in a database.
+
+Indexes are created using a few database columns.
+	>  The first column is the Search key that contains a copy of the primary key or candidate key of the table. These values are stored in sorted order so that the corresponding data can be accessed quickly.
+Note: The data may or may not be stored in sorted order.
+	>  The second column is the Data Reference or Pointer which contains a set of pointers holding the address of the disk block where that particular key value can be found.
+
+The indexing has various attributes:
+	>    Access Types: This refers to the type of access such as value based search, range access, etc.
+	>    Access Time: It refers to the time needed to find particular data element or set of elements.
+	>    Insertion Time: It refers to the time taken to find the appropriate space and insert a new data.
+	>    Deletion Time: Time taken to find an item and delete it as well as update the index structure.
+	>    Space Overhead: It refers to the additional space required by the index.
+
+In general, there are two types of file organization mechanism which are followed by the indexing methods to store the data:
+i: Sequential File Organization or Ordered Index File: In this, the indices are based on a sorted ordering of the values. These are generally fast and a more traditional type of storing mechanism. These Ordered or Sequential file organization might store the data in a dense or sparse format:
+
+    	Dense Index:
+	> For every search key value in the data file, there is an index record.
+	> This record contains the search key and also a reference to the first data record with that search key value.
+	Sparse Index:
+	> The index record appears only for a few items in the data file. Each item points to a block as shown.
+	> To locate a record, we find the index record with the largest search key value less than or equal to the search key value we are looking for.
+	> We start at that record pointed to by the index record, and proceed along with the pointers in the file (that is, sequentially) until we find the desired record.
+ii: Hash File organization: Indices are based on the values being distributed uniformly across a range of buckets. The buckets to which a value is assigned is determined by a function called a hash function.
+There are primarily three methods of indexing:
+		>    Clustered Indexing
+		>    Non-Clustered or Secondary Indexing
+		>    Multilevel Indexing
+
+28. Memory Management:
+Memory management is the process of controlling and coordinating computer memory, assigning portions called blocks to various running programs to optimize overall system performance. Memory management resides in hardware, in the OS (operating system), and in programs and applications.
+In hardware, memory management involves components that physically store data, such as RAM (random access memory) chips, memory caches, and flash-based SSDs (solid-state drives). In the OS, memory management involves the allocation (and constant reallocation) of specific memory blocks to individual programs as user demands change. At the application level, memory management ensures the availability of adequate memory for the objects and data structures of each running program at all times. Application memory management combines two related tasks, known as allocation and recycling.
+	> When the program requests a block of memory, a part of the memory manager called the allocator assigns that block to the program.
+	> When a program no longer needs the data in previously allocated memory blocks, those blocks become available for reassignment. This task can be done manually (by the programmer) or automatically (by the memory manager).
+
+29. Key in Database:
+A Key is a data item that exclusively identifies a record. In other words, key is a set of column(s) that is used to uniquely identify the record in a table. It is used to fetch or retrieve records / data-rows from data table according to the condition/requirement. Key provide several types of constraints like column can’t store duplicate values or null values. Keys are also used to generate relationship among different database tables or views.
+
+TYPES OF KEYS:
+Database supports the following types of keys.
+	> Super Key
+	> Minimal Super Key
+	> Candidate Key
+	> Primary Key
+	> Unique Key
+	> Alternate Key
+	> Composite Key
+	> Foreign Key
+	> Natural Key
+	> Surrogate Key
+	
+	CANDIDATE KEY: A Candidate key is an attribute or set of attributes that uniquely identifies a record. Among the set of candidate, one candidate key is chosen as Primary Key. So a table can have multiple candidate key but each table can have maximum one primary key.
+	PRIMARY KEY: A Primary key uniquely identifies each record in a table and must never be the same for the 2 records. Primary key is a set of one or more fields ( columns) of a table that uniquely identify a record in database table. A table can have only one primary key and one candidate key can select as a primary key. The primary key should be chosen such that its attributes are never or rarely changed, for example, we can’t select Student_Id field as a primary key because in some case Student_Id of student may be changed.
+	ALTERNATE KEY: Alternate keys are candidate keys that are not selected as primary key. Alternate key can also work as a primary key. Alternate key is also called “Secondary Key”.
+	UNIQUE KEY: A unique key is a set of one or more attribute that can be used to uniquely identify the records in table. Unique key is similar to primary key but unique key field can contain a “Null” value but primary key doesn’t allow “Null” value. Other difference is that primary key field contain a clustered index and unique field contain a non-clustered index.
+	COMPOSITE KEY: Composite key is a combination of more than one attributes that can be used to uniquely identity each record. It is also known as “Compound” key. A composite key may be a candidate or primary key.
+	SUPER KEY: Super key is a set of on e or more than one keys that can be used to uniquely identify the record in table. A Super key for an entity is a set of one or more attributes whose combined value uniquely identifies the entity in the entity set. A super key is a combine form of Primary Key, Alternate key and Unique key and Primary Key, Unique Key and Alternate Key are subset of super key. A Super Key is simply a non-minimal Candidate Key, that is to say one with additional columns not strictly required to ensure uniqueness of the row. A super key can have a single column. 
+	MINIMAL SUPER KEY: A minimal super key is a minimum set of columns that can be used to uniquely identify a row. In other wordsm the minimum number of columns that can be combined to give a unique value for every row in the table.
+	NATURAL KEY: A natural key is a key composed of columns that actually have a logical relationship to other columns within a table. For example, if we use Student_Id, Student_Name and Father_Name columns to form a key then it would be “Natural Key” because there is definitely a relationship between these columns and other columns that exist in table. Natural keys are often called “Business Key ” or “Domain Key”.
+	SURROGATE KEY: Surrogate key is an artificial key that is used to uniquely identify the record in table. For example, in SQL Server or Sybase database system contain an artificial key that is known as “Identity”. Surrogate keys are just simple sequential number. Surrogate keys are only used to act as a primary key.
+	FOREIGN KEY: Foreign key is used to generate the relationship between the tables. Foreign Key is a field in database table that is Primary key in another table. A foreign key can accept null and duplicate value.
+
+30. NUMA:
+Non-uniform memory access (NUMA) is a computer memory design used in multiprocessing, where the memory access time depends on the memory location relative to the processor. Under NUMA, a processor can access its own local memory faster than non-local memory (memory local to another processor or memory shared between processors). The benefits of NUMA are limited to particular workloads, notably on servers where the data is often associated strongly with certain tasks or users.[1]
+NUMA architectures logically follow in scaling from symmetric multiprocessing (SMP) architectures. They were developed commercially during the 1990s by Unisys, Convex Computer (later Hewlett-Packard), Honeywell Information Systems Italy (HISI) (later Groupe Bull), Silicon Graphics (later Silicon Graphics International), Sequent Computer Systems (later IBM), Data General (later EMC), and Digital (later Compaq, then HP, now HPE). Techniques developed by these companies later featured in a variety of Unix-like operating systems, and to an extent in Windows NT.
+The first commercial implementation of a NUMA-based Unix system was the Symmetrical Multi Processing XPS-100 family of servers, designed by Dan Gielan of VAST Corporation for Honeywell Information Systems Italy.
+
+31. SNMP:
+SNMP is an application layer protocol which uses UDP port number 161/162.SNMP is used to monitor the network, detect network faults and sometimes even used to configure remote devices.
+    > SNMP components –
+	There are 3 components of SNMP:
+    	> SNMP Manager – It is a centralised system used to monitor network.It is also known as Network Management Station (NMS)
+    	> SNMP agent – It is a software management software module installed on a managed device. Managed devices can be network devices like PC, router, switches, servers etc.
+    	> Management Information Base – MIB consists of information of resources that are to be managed. These information is organised hierarchically. It consists of objects instances which are essentially variables.
+
+    > SNMP messages – Different variables are:
+GetRequest – SNMP manager sends this message to request data from SNMP agent. It is simply used to retrieve data from SNMP agent. In response to this, SNMP agent responds with requested value through response message.
+GetNextRequest – This message can be sent to discover what data is available on a SNMP agent. The SNMP manager can request for data continuously until no more data is left. In this way, SNMP manager can take knowledge of all the available data on SNMP agent.
+GetBulkRequest – This message is used to retrieve large data at once by the SNMP manager from SNMP agent. It is introduced in SNMPv2c.
+SetRequest – It is used by SNMP manager to set the value of an object instance on the SNMP agent.
+Response – It is a message send from agent upon a request from manager. When sent in response to Get messages, it will contain the data requested. When sent in response to Set message, it will contain the newly set value as confirmation that the value has been set.
+Trap – These are the message send by the agent without being requested by the manager. It is sent when a fault has occurred.
+InformRequest – It was introduced in SNMPv2c, used to identify if the trap message has been received by the manager or not. The agents can be configured to set trap continuously until it receives an Inform message. It is same as trap but adds an acknowledgement that trap doesn’t provide.
+SNMP security levels – It defines the type of security algorithm performed on SNMP packets. These are used in only SNMPv3. There are 3 security levels namely:
+	> noAuthNoPriv – This (no authentication, no privacy) security level uses community string for authentication and no encryption for privacy.
+	> authNopriv – This security level (authentication, no privacy) uses HMAC with Md5 for authentication and no encryption is used for privacy.
+	> authPriv – This security level (authentication, privacy) uses HMAC with Md5 or SHA for authentication and encryption uses DES-56 algorithm.
+
+    > SNMP versions – There are 3 versions of SNMP:
+	SNMPv1 – It uses community strings for authentication and use UDP only.
+    	SNMPv2c – It uses community strings for authentication. It uses UDP but can be configured to use TCP.
+	SNMPv3 – It uses Hash based MAC with MD5 or SHA for authentication and DES-56 for privacy.This version uses TCP. Therefore, conclusion is the higher the version of SNMP, more secure it will be.
